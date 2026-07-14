@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>QUEST | Question Everything — Community Token on Solana</title>
+<meta name="description" content="QUEST is a community-driven token on Solana for independent thinkers. Fair launch, transparent allocation, and a community built on curiosity and critical thinking.">
+<meta name="theme-color" content="#060606">
+
+<!-- ============================================================
+     LAUNCH CHECKLIST — search "TODO" in this file:
+     1. Replace # links (buy buttons + social links) with live URLs
+     2. Set your real domain in og:url / twitter + og:image (1200x630)
+     3. Optional: swap the SVG emblem in the hero for your logo.png
+     ============================================================ -->
+
+<!-- Social sharing (Open Graph / Twitter cards) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="QUEST | Question Everything">
+<meta property="og:description" content="A community-driven Solana token for independent thinkers. Think for yourself. Question everything.">
+<meta property="og:url" content="https://your-domain.com/"> <!-- TODO: replace with live domain -->
+<meta property="og:image" content="https://your-domain.com/og-image.png"> <!-- TODO: 1200x630 image, absolute URL -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="QUEST | Question Everything">
+<meta name="twitter:description" content="A community-driven Solana token for independent thinkers.">
+<meta name="twitter:image" content="https://your-domain.com/og-image.png"> <!-- TODO -->
+
+<!-- Favicon (inline SVG — no file needed) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ccircle%20cx='50'%20cy='50'%20r='44'%20fill='%23060606'%20stroke='%23FFD66B'%20stroke-width='8'/%3E%3Ctext%20x='50'%20y='70'%20font-size='56'%20font-weight='900'%20font-family='Arial'%20text-anchor='middle'%20fill='%23FFD66B'%3E%3F%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Flags JS availability so scroll-reveal styles only apply when JS runs -->
+<script>document.documentElement.classList.add('js');</script>
+
+<style>
+:root{
+  --bg:#060606;
+  --panel:#111;
+  --panel-line:#333;
+  --gold:#FFD66B;
+  --gold-soft:rgba(255,214,107,.15);
+  --line:#2a2a2a;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  background:var(--bg);
+  font-family:Inter,sans-serif;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+::selection{background:var(--gold);color:#000}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(circle at top,#7d6414 0%,transparent 40%),
+    radial-gradient(circle at bottom,#2e2505 0%,transparent 35%);
+  opacity:.15;
+  pointer-events:none;
+}
+
+/* ---------- Header ---------- */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  padding:18px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(6,6,6,.85);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,214,107,.1);
+}
+
+.logo{
+  font-family:Orbitron,sans-serif;
+  font-size:28px;
+  font-weight:800;
+  color:var(--gold);
+  text-decoration:none;
+  letter-spacing:2px;
+}
+
+nav{display:flex;gap:32px}
+
+nav a{
+  position:relative;
+  padding:4px 0;
+  text-decoration:none;
+  color:#fff;
+  transition:color .3s;
+}
+
+nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-2px;
+  width:100%;
+  height:2px;
+  background:var(--gold);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .3s;
+}
+
+nav a:hover,
+nav a:focus-visible{color:var(--gold)}
+
+nav a:hover::after,
+nav a:focus-visible::after{transform:scaleX(1)}
+
+/* Hamburger (hidden on desktop) */
+
+.nav-toggle{
+  display:none;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:5px;
+  width:44px;
+  height:44px;
+  background:none;
+  border:1px solid rgba(255,214,107,.4);
+  border-radius:10px;
+  cursor:pointer;
+}
+
+.nav-toggle span{
+  display:block;
+  width:20px;
+  height:2px;
+  background:var(--gold);
+  transition:transform .3s,opacity .3s;
+}
+
+body.nav-open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+body.nav-open .nav-toggle span:nth-child(2){opacity:0}
+body.nav-open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ---------- Hero ---------- */
+
+.hero{
+  padding:90px 8%;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+
+.hero h1{
+  font-family:Orbitron,sans-serif;
+  font-size:clamp(40px,6vw,64px);
+  line-height:1.1;
+}
+
+.gold{color:var(--gold)}
+
+.hero p{
+  margin-top:25px;
+  font-size:20px;
+  line-height:1.8;
+  opacity:.85;
+  max-width:560px;
+}
+
+.buttons{
+  margin-top:45px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+}
+
+.btn{
+  display:inline-block;
+  padding:17px 35px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:700;
+  transition:transform .3s,box-shadow .3s,background .3s,color .3s;
+}
+
+.btn:focus-visible{outline:2px solid #fff;outline-offset:3px}
+
+.primary{
+  background:var(--gold);
+  color:#000;
+  box-shadow:0 8px 24px rgba(255,214,107,.25);
+}
+
+.primary:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 32px rgba(255,214,107,.35);
+}
+
+.secondary{
+  border:2px solid var(--gold);
+  color:var(--gold);
+}
+
+.secondary:hover{background:var(--gold);color:#000}
+
+/* Hero emblem
+   TODO (optional): replace the <svg> in the hero with
+   <img src="logo.png" alt="QUEST logo"> once the file is hosted. */
+
+.emblem{
+  width:min(420px,80%);
+  display:block;
+  margin:auto;
+  filter:drop-shadow(0 0 40px rgba(255,214,107,.15));
+  animation:float 7s ease-in-out infinite;
+}
+
+@keyframes float{50%{transform:translateY(-12px)}}
+
+.orbit{
+  animation:spin 40s linear infinite;
+  transform-origin:center;
+  transform-box:fill-box;
+}
+
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ---------- Sections ---------- */
+
+.section{padding:90px 8%;scroll-margin-top:96px}
+
+.title{
+  text-align:center;
+  font-size:clamp(30px,4.5vw,42px);
+  font-family:Orbitron,sans-serif;
+  margin-bottom:50px;
+}
+
+.title::after{
+  content:"";
+  display:block;
+  width:70px;
+  height:3px;
+  background:var(--gold);
+  margin:18px auto 0;
+  border-radius:2px;
+}
+
+/* Cards */
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:var(--panel);
+  padding:35px;
+  border-radius:18px;
+  border:1px solid var(--panel-line);
+  transition:transform .3s,border-color .3s,box-shadow .3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  border-color:var(--gold);
+  box-shadow:0 14px 32px rgba(255,214,107,.08);
+}
+
+.card h3{
+  margin-bottom:15px;
+  color:var(--gold);
+  font-family:Orbitron,sans-serif;
+  font-size:19px;
+}
+
+.card p{line-height:1.7;opacity:.85}
+
+/* Tokenomics */
+
+.token{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:35px;
+}
+
+.token-box{
+  padding:35px 30px;
+  background:var(--panel);
+  border:1px solid var(--panel-line);
+  border-radius:15px;
+}
+
+.token-box h3{
+  color:var(--gold);
+  margin-bottom:22px;
+  font-family:Orbitron,sans-serif;
+  font-size:22px;
+}
+
+.token-box ul{list-style:none}
+
+.token-box li{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:14px;
+  padding-bottom:11px;
+  margin-bottom:13px;
+  border-bottom:1px dashed var(--line);
+}
+
+.token-box li:last-child{margin-bottom:0}
+
+.token-box li span{opacity:.8}
+
+.token-box li strong{
+  color:var(--gold);
+  font-weight:600;
+  text-align:right;
+  white-space:nowrap;
+}
+
+/* Roadmap */
+
+.timeline{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+
+.phase{
+  padding:28px 25px;
+  border-left:4px solid var(--gold);
+  background:var(--panel);
+  border-radius:0 14px 14px 0;
+  transition:transform .3s,background .3s;
+}
+
+.phase:hover{transform:translateX(4px);background:#141210}
+
+.phase h3{
+  color:var(--gold);
+  font-family:Orbitron,sans-serif;
+  font-size:18px;
+  margin-bottom:16px;
+}
+
+.phase ul{list-style:none}
+
+.phase li{
+  position:relative;
+  padding-left:18px;
+  margin-bottom:10px;
+  opacity:.85;
+  line-height:1.5;
+}
+
+.phase li::before{
+  content:"—";
+  position:absolute;
+  left:0;
+  color:var(--gold);
+}
+
+/* CTA */
+
+.cta{
+  text-align:center;
+  padding:110px 8%;
+  background:radial-gradient(circle at center,rgba(255,214,107,.07),transparent 60%);
+}
+
+.cta h2{
+  font-size:clamp(32px,5vw,48px);
+  font-family:Orbitron,sans-serif;
+}
+
+.cta p{
+  margin:25px auto 40px;
+  max-width:700px;
+  font-size:20px;
+  line-height:1.8;
+  opacity:.8;
+}
+
+/* Footer */
+
+footer{
+  padding:55px 8% 40px;
+  text-align:center;
+  background:#090909;
+  margin-top:60px;
+  border-top:1px solid #161616;
+}
+
+.foot-brand{
+  font-family:Orbitron,sans-serif;
+  font-weight:800;
+  font-size:22px;
+  color:var(--gold);
+  letter-spacing:2px;
+  margin-bottom:12px;
+}
+
+.socials{margin:18px 0 6px}
+
+.socials a{
+  color:var(--gold);
+  text-decoration:none;
+  margin:0 14px;
+  font-weight:600;
+}
+
+.socials a:hover,
+.socials a:focus-visible{text-decoration:underline}
+
+.copyright{opacity:.6;font-size:14px}
+
+.disclaimer{
+  margin:24px auto 0;
+  font-size:13px;
+  opacity:.45;
+  max-width:640px;
+  line-height:1.6;
+}
+
+/* ---------- Scroll reveal (only when JS is available) ---------- */
+
+.js .reveal{
+  opacity:0;
+  transform:translateY(24px);
+  transition:opacity .6s ease,transform .6s ease;
+}
+
+.js .reveal.visible{opacity:1;transform:none}
+
+.js .cards>.reveal:nth-child(2),
+.js .token>.reveal:nth-child(2),
+.js .timeline>.reveal:nth-child(2){transition-delay:.08s}
+
+.js .cards>.reveal:nth-child(3),
+.js .timeline>.reveal:nth-child(3){transition-delay:.16s}
+
+.js .timeline>.reveal:nth-child(4){transition-delay:.24s}
+
+/* ---------- Mobile ---------- */
+
+@media(max-width:900px){
+
+  header{padding:14px 6%}
+
+  .nav-toggle{display:flex}
+
+  nav{
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    flex-direction:column;
+    gap:0;
+    padding:6px 6% 22px;
+    background:rgba(6,6,6,.97);
+    border-bottom:1px solid var(--gold-soft);
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(-8px);
+    transition:opacity .25s,transform .25s,visibility .25s;
+  }
+
+  body.nav-open nav{
+    opacity:1;
+    visibility:visible;
+    transform:none;
+  }
+
+  nav a{
+    padding:14px 0;
+    border-bottom:1px solid #1c1c1c;
+    font-size:17px;
+  }
+
+  nav a::after{display:none}
+
+  .hero{
+    grid-template-columns:1fr;
+    text-align:center;
+    padding:60px 6% 50px;
+    gap:45px;
+  }
+
+  .hero p{margin-left:auto;margin-right:auto}
+
+  .buttons{justify-content:center}
+
+  .emblem{width:min(280px,70%)}
+
+  .section{padding:60px 6%}
+
+  .cta{padding:80px 6%}
+}
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+  }
+}
+</style>
+
+</head>
+
+<body id="top">
+
+<header>
+
+  <a class="logo" href="#top" aria-label="QUEST — back to top">QUEST</a>
+
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav id="site-nav" aria-label="Primary">
+    <a href="#top">Home</a>
+    <a href="#about">About</a>
+    <a href="#tokenomics">Tokenomics</a>
+    <a href="#roadmap">Roadmap</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+
+</header>
+
+<main>
+
+<section class="hero">
+
+  <div class="reveal">
+
+    <h1>
+      Think for Yourself.<br>
+      <span class="gold">Question Everything.</span>
+    </h1>
+
+    <p>
+      QUEST is a community-driven token built for independent thinkers,
+      curious minds, and people who believe knowledge grows through
+      questions—not assumptions.
+    </p>
+
+    <div class="buttons">
+      <a class="btn primary" href="#">Buy on FOMO</a> <!-- TODO: live FOMO launch link -->
+      <a class="btn secondary" href="#">Join Telegram</a> <!-- TODO: Telegram invite link -->
+    </div>
+
+  </div>
+
+  <div class="reveal">
+    <!-- Self-contained emblem so nothing shows broken.
+         TODO (optional): swap for <img src="logo.png" alt="QUEST logo"> -->
+    <svg class="emblem" viewBox="0 0 300 300" role="img" aria-label="QUEST emblem" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#FFD66B" stop-opacity=".35"/>
+          <stop offset="70%" stop-color="#FFD66B" stop-opacity=".06"/>
+          <stop offset="100%" stop-color="#FFD66B" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#FFE9A8"/>
+          <stop offset="100%" stop-color="#C9A227"/>
+        </linearGradient>
+      </defs>
+      <circle cx="150" cy="150" r="148" fill="url(#halo)"/>
+      <circle class="orbit" cx="150" cy="150" r="124" fill="none" stroke="#FFD66B" stroke-width="1.5" stroke-dasharray="4 12" opacity=".5"/>
+      <circle cx="150" cy="150" r="102" fill="none" stroke="url(#ring)" stroke-width="3"/>
+      <text x="150" y="197" text-anchor="middle" font-family="Orbitron, Arial, sans-serif" font-weight="800" font-size="130" fill="#FFD66B">?</text>
+    </svg>
+  </div>
+
+</section>
+
+<section class="section" id="about">
+
+  <h2 class="title reveal">Why QUEST?</h2>
+
+  <div class="cards">
+
+    <div class="card reveal">
+      <h3>Think Critically</h3>
+      <p>Challenge assumptions. Explore ideas. Stay curious.</p>
+    </div>
+
+    <div class="card reveal">
+      <h3>Community Driven</h3>
+      <p>Built with transparency and shaped by community participation.</p>
+    </div>
+
+    <div class="card reveal">
+      <h3>Built on Solana</h3>
+      <p>Fast, scalable, and low transaction fees.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section" id="tokenomics">
+
+  <h2 class="title reveal">Token Information</h2>
+
+  <div class="token">
+
+    <div class="token-box reveal">
+      <h3>Overview</h3>
+      <ul>
+        <li><span>Token Name</span><strong>Question Everything</strong></li>
+        <li><span>Ticker</span><strong>QUEST</strong></li>
+        <li><span>Blockchain</span><strong>Solana</strong></li>
+        <li><span>Total Supply</span><strong>1,000,000,000</strong></li>
+        <li><span>Decimals</span><strong>9</strong></li>
+      </ul>
+    </div>
+
+    <div class="token-box reveal">
+      <h3>Allocation</h3>
+      <ul>
+        <li><span>Community</span><strong>40%</strong></li>
+        <li><span>Liquidity</span><strong>20%</strong></li>
+        <li><span>Treasury</span><strong>15%</strong></li>
+        <li><span>Marketing</span><strong>15%</strong></li>
+        <li><span>Team (subject to vesting)</span><strong>10%</strong></li>
+      </ul>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section" id="roadmap">
+
+  <h2 class="title reveal">Roadmap</h2>
+
+  <div class="timeline">
+
+    <div class="phase reveal">
+      <h3>Phase 1</h3>
+      <ul>
+        <li>Launch</li>
+        <li>Website</li>
+        <li>Branding</li>
+        <li>Community</li>
+      </ul>
+    </div>
+
+    <div class="phase reveal">
+      <h3>Phase 2</h3>
+      <ul>
+        <li>Marketing</li>
+        <li>Partnerships</li>
+        <li>1,000 Holders</li>
+      </ul>
+    </div>
+
+    <div class="phase reveal">
+      <h3>Phase 3</h3>
+      <ul>
+        <li>Governance</li>
+        <li>Creator Program</li>
+        <li>Educational Initiatives</li>
+      </ul>
+    </div>
+
+    <div class="phase reveal">
+      <h3>Phase 4</h3>
+      <ul>
+        <li>Global Expansion</li>
+        <li>Community-led Projects</li>
+      </ul>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="cta">
+
+  <h2 class="reveal">Join the Movement</h2>
+
+  <p class="reveal">
+    QUEST isn't just about a token—it's about building a community around
+    critical thinking, curiosity, and collaboration.
+  </p>
+
+  <a class="btn primary reveal" href="#">Launch on FOMO</a> <!-- TODO: live FOMO launch link -->
+
+</section>
+
+<section class="section" id="faq">
+
+  <h2 class="title reveal">Frequently Asked Questions</h2>
+
+  <div class="cards">
+
+    <div class="card reveal">
+      <h3>What is QUEST?</h3>
+      <p>A Solana-based community token focused on education, critical thinking, and participation.</p>
+    </div>
+
+    <div class="card reveal">
+      <h3>Is there a presale?</h3>
+      <p>No. Fair launch planned through a public launch platform.</p>
+    </div>
+
+    <div class="card reveal">
+      <h3>Where can I trade?</h3>
+      <p>After launch, trading will depend on the platform used and any subsequent listings.</p>
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+
+  <p class="foot-brand">QUEST</p>
+
+  <p class="copyright">© <span id="year">2026</span> QUEST · Question Everything</p>
+
+  <div class="socials">
+    <a href="#">X</a> <!-- TODO: X profile URL -->
+    <a href="#">Telegram</a> <!-- TODO: Telegram invite URL -->
+    <a href="#">Discord</a> <!-- TODO: Discord invite URL -->
+    <a href="#">GitHub</a> <!-- TODO: GitHub org URL -->
+  </div>
+
+  <p class="disclaimer">
+    QUEST is a community token created for entertainment and community
+    participation. Nothing on this site is financial advice. Digital assets
+    are volatile and carry risk—always do your own research.
+  </p>
+
+</footer>
+
+<script>
+// Auto-update copyright year
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Mobile nav toggle
+var toggle = document.querySelector('.nav-toggle');
+var nav = document.getElementById('site-nav');
+
+toggle.addEventListener('click', function(){
+  var open = document.body.classList.toggle('nav-open');
+  toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+});
+
+// Close the menu after tapping a link
+nav.addEventListener('click', function(e){
+  if (e.target.tagName === 'A') {
+    document.body.classList.remove('nav-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Open menu');
+  }
+});
+
+// Scroll-reveal animations
+var reveals = document.querySelectorAll('.reveal');
+
+if ('IntersectionObserver' in window) {
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  reveals.forEach(function(el){ io.observe(el); });
+} else {
+  reveals.forEach(function(el){ el.classList.add('visible'); });
+}
+</script>
+
+</body>
+</html>
