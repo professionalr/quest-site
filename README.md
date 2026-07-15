@@ -1,16 +1,16 @@
-# QUEST — Question Everything
+# QuestiQ — Question Everything
 
-Landing page for **QUEST**, a community-driven token on Solana.
+Landing page for **QuestiQ**, a community-driven token on Solana.
 
 Single-file static site — pure HTML/CSS/JS, no build step, no dependencies.
 
 ## Deploy on GitHub Pages
 
-1. Create a new repository (e.g. `quest-site`)
+1. Create a new repository (e.g. `questiq-site`)
 2. Upload everything in this folder to the repo root
 3. Go to **Settings → Pages**
 4. Under **Build and deployment**, set Source to **Deploy from a branch**, choose **main** and **/ (root)**, then Save
-5. The site goes live in about a minute at `https://YOUR-USERNAME.github.io/quest-site/`
+5. The site goes live in about a minute at `https://YOUR-USERNAME.github.io/questiq-site/`
 
 ### Custom domain (optional)
 
@@ -25,7 +25,7 @@ Single-file static site — pure HTML/CSS/JS, no build step, no dependencies.
 Search `index.html` for **TODO** — every placeholder is tagged:
 
 - [ ] Buy buttons → live FOMO launch link (hero + CTA section)
-- [ ] Telegram button in the hero
+- [ ] "Buy on Pump.fun" button in the hero → Pump.fun coin link
 - [ ] Footer social links: X, Telegram, Discord, GitHub
 - [ ] `og:url` → your live URL
 - [ ] `og:image` / `twitter:image` → `https://YOUR-LIVE-URL/og-image.png` (a placeholder image is included in this repo — replace it with branded art anytime)
