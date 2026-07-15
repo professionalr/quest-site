@@ -24,8 +24,8 @@ Single-file static site — pure HTML/CSS/JS, no build step, no dependencies.
 
 Search `index.html` for **TODO** — every placeholder is tagged:
 
-- [ ] Buy buttons → live FOMO launch link (hero + CTA section)
-- [ ] "Buy on Pump.fun" button in the hero → Pump.fun coin link
+- [ ] "Buy on FOMO" / "Launch on FOMO" buttons → live FOMO link (hero + CTA)
+- [ ] "Buy on Pump.fun" buttons → Pump.fun coin link (hero + CTA)
 - [ ] Footer social links: X, Telegram, Discord, GitHub
 - [ ] `og:url` → your live URL
 - [ ] `og:image` / `twitter:image` → `https://YOUR-LIVE-URL/og-image.png` (a placeholder image is included in this repo — replace it with branded art anytime)
