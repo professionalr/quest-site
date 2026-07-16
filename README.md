@@ -26,7 +26,6 @@ Search `index.html` for **TODO** — every placeholder is tagged:
 
 - [ ] "Buy on FOMO" / "Launch on FOMO" buttons → live FOMO link (hero + CTA)
 - [ ] "Buy on Pump.fun" buttons → Pump.fun coin link (hero + CTA)
-- [ ] Footer social links: X, Telegram, Discord, GitHub
 - [ ] `og:url` → your live URL
 - [ ] `og:image` / `twitter:image` → `https://YOUR-LIVE-URL/og-image.png` (a placeholder image is included in this repo — replace it with branded art anytime)
 - [ ] Optional: swap the SVG emblem in the hero for your real `logo.png`

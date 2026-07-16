@@ -10,7 +10,7 @@
 
 <!-- ============================================================
      LAUNCH CHECKLIST — search "TODO" in this file:
-     1. Replace # links (buy buttons + social links) with live URLs
+     1. Replace # buy-button links with live URLs (FOMO x2, Pump.fun x2)
      2. Set your real domain in og:url / twitter + og:image (1200x630)
      3. Optional: swap the SVG emblem in the hero for your logo.png
      ============================================================ -->
@@ -429,6 +429,17 @@ footer{
 .socials a:hover,
 .socials a:focus-visible{text-decoration:underline}
 
+.doc-btn{
+  margin:20px auto 4px;
+  padding:13px 28px;
+  font-size:15px;
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+}
+
+.doc-btn svg{width:16px;height:16px}
+
 .copyright{opacity:.6;font-size:14px}
 
 .disclaimer{
@@ -749,10 +760,14 @@ footer{
   <p class="copyright">© <span id="year">2026</span> QuestiQ · Question Everything</p>
 
   <div class="socials">
-    <a href="#">X</a> <!-- TODO: X profile URL -->
-    <a href="#">Telegram</a> <!-- TODO: Telegram invite URL -->
-    <a href="#">Discord</a> <!-- TODO: Discord invite URL -->
-    <a href="#">GitHub</a> <!-- TODO: GitHub org URL -->
+    <a href="https://x.com/QUEST__IQ" target="_blank" rel="noopener">X</a>
+  </div>
+
+  <div>
+    <a class="btn secondary doc-btn" href="Executive%20Summary.pdf" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Executive Summary
+    </a>
   </div>
 
   <p class="disclaimer">
