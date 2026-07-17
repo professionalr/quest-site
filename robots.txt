@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # After launch, optionally add:
-# Sitemap: https://your-domain.com/sitemap.xml
+# Sitemap: https://getquestiq.com/sitemap.xml

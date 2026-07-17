@@ -26,8 +26,7 @@ Search `index.html` for **TODO** — every placeholder is tagged:
 
 - [ ] "Buy on FOMO" / "Launch on FOMO" buttons → live FOMO link (hero + CTA)
 - [ ] "Buy on Pump.fun" buttons → Pump.fun coin link (hero + CTA)
-- [ ] `og:url` → your live URL
-- [ ] `og:image` / `twitter:image` → `https://YOUR-LIVE-URL/og-image.png` (a placeholder image is included in this repo — replace it with branded art anytime)
+- [ ] At launch: remove the red "Coming Soon" ribbons — delete the `coming-soon` classes and `.soon-ribbon` spans (hero + CTA)
 - [ ] Optional: swap the SVG emblem in the hero for your real `logo.png`
 
 ## Files

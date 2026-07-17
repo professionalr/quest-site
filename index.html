@@ -7,24 +7,25 @@
 <title>QuestiQ | Question Everything — Community Token on Solana</title>
 <meta name="description" content="QuestiQ is a community-driven token on Solana for independent thinkers. Fair launch, transparent allocation, and a community built on curiosity and critical thinking.">
 <meta name="theme-color" content="#060606">
+<link rel="canonical" href="https://getquestiq.com/">
 
 <!-- ============================================================
      LAUNCH CHECKLIST — search "TODO" in this file:
-     1. Replace # buy-button links with live URLs (FOMO x2, Pump.fun x2)
-     2. Set your real domain in og:url / twitter + og:image (1200x630)
-     3. Optional: swap the SVG emblem in the hero for your logo.png
+     1. At launch: swap # buy-button links for live URLs (FOMO x2,
+        Pump.fun x2) and delete the coming-soon classes + .soon-ribbon spans
+     2. Optional: swap the SVG emblem in the hero for your logo.png
      ============================================================ -->
 
 <!-- Social sharing (Open Graph / Twitter cards) -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="QuestiQ | Question Everything">
 <meta property="og:description" content="A community-driven Solana token for independent thinkers. Think for yourself. Question everything.">
-<meta property="og:url" content="https://your-domain.com/"> <!-- TODO: replace with live domain -->
-<meta property="og:image" content="https://your-domain.com/og-image.png"> <!-- TODO: 1200x630 image, absolute URL -->
+<meta property="og:url" content="https://getquestiq.com/">
+<meta property="og:image" content="https://getquestiq.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="QuestiQ | Question Everything">
 <meta name="twitter:description" content="A community-driven Solana token for independent thinkers.">
-<meta name="twitter:image" content="https://your-domain.com/og-image.png"> <!-- TODO -->
+<meta name="twitter:image" content="https://getquestiq.com/og-image.png">
 
 <!-- Favicon (inline SVG — no file needed) -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ccircle%20cx='50'%20cy='50'%20r='44'%20fill='%23060606'%20stroke='%23FFD66B'%20stroke-width='8'/%3E%3Ctext%20x='50'%20y='70'%20font-size='56'%20font-weight='900'%20font-family='Arial'%20text-anchor='middle'%20fill='%23FFD66B'%3E%3F%3C/text%3E%3C/svg%3E">
@@ -213,6 +214,38 @@ body.nav-open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-4
 }
 
 .secondary:hover{background:var(--gold);color:#000}
+
+/* Coming-soon state — at launch, remove the .coming-soon class
+   and the .soon-ribbon spans (hero + CTA) to re-activate buttons */
+
+.coming-soon{position:relative}
+
+.coming-soon .btn{
+  pointer-events:none;
+  opacity:.5;
+  filter:saturate(.55);
+}
+
+.soon-ribbon{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%) rotate(-6deg);
+  background:linear-gradient(135deg,#ef4444,#b91c1c);
+  color:#fff;
+  font-family:Orbitron,sans-serif;
+  font-weight:600;
+  font-size:13px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  padding:9px 28px;
+  border-radius:6px;
+  border:1px solid rgba(255,255,255,.25);
+  box-shadow:0 8px 22px rgba(220,38,38,.45);
+  white-space:nowrap;
+  pointer-events:none;
+  z-index:2;
+}
 
 /* Hero emblem
    TODO (optional): replace the <svg> in the hero with
@@ -576,9 +609,10 @@ footer{
       questions—not assumptions.
     </p>
 
-    <div class="buttons">
-      <a class="btn primary" href="#">Buy on FOMO</a> <!-- TODO: live FOMO launch link -->
-      <a class="btn secondary" href="#">Buy on Pump.fun</a> <!-- TODO: Pump.fun coin link -->
+    <div class="buttons coming-soon">
+      <a class="btn primary" href="#" aria-disabled="true" tabindex="-1">Buy on FOMO</a> <!-- TODO: live FOMO launch link -->
+      <a class="btn secondary" href="#" aria-disabled="true" tabindex="-1">Buy on Pump.fun</a> <!-- TODO: Pump.fun coin link -->
+      <span class="soon-ribbon">Coming Soon</span>
     </div>
 
   </div>
@@ -719,9 +753,10 @@ footer{
     critical thinking, curiosity, and collaboration.
   </p>
 
-  <div class="buttons reveal">
-    <a class="btn primary" href="#">Launch on FOMO</a> <!-- TODO: live FOMO launch link -->
-    <a class="btn secondary" href="#">Buy on Pump.fun</a> <!-- TODO: Pump.fun coin link -->
+  <div class="buttons reveal coming-soon">
+    <a class="btn primary" href="#" aria-disabled="true" tabindex="-1">Launch on FOMO</a> <!-- TODO: live FOMO launch link -->
+    <a class="btn secondary" href="#" aria-disabled="true" tabindex="-1">Buy on Pump.fun</a> <!-- TODO: Pump.fun coin link -->
+    <span class="soon-ribbon">Coming Soon</span>
   </div>
 
 </section>
