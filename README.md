@@ -26,6 +26,7 @@ Search `index.html` for **TODO** — every placeholder is tagged:
 
 - [ ] "Buy on FOMO" / "Launch on FOMO" buttons → live FOMO link (hero + CTA)
 - [ ] "Buy on Pump.fun" buttons → Pump.fun coin link (hero + CTA)
+- [ ] "Buy on BONK.fun" buttons → your specific BONK.fun coin link (hero + CTA — currently the letsbonk.fun homepage)
 - [ ] At launch: remove the red "Coming Soon" ribbons — delete the `coming-soon` classes and `.soon-ribbon` spans (hero + CTA)
 - [ ] Optional: swap the SVG emblem in the hero for your real `logo.png`
 

@@ -11,8 +11,9 @@
 
 <!-- ============================================================
      LAUNCH CHECKLIST — search "TODO" in this file:
-     1. At launch: swap # buy-button links for live URLs (FOMO x2,
-        Pump.fun x2) and delete the coming-soon classes + .soon-ribbon spans
+     1. At launch: swap buy-button links for live URLs (FOMO x2,
+        Pump.fun x2, BONK.fun x2) and delete the coming-soon
+        classes + .soon-ribbon spans
      2. Optional: swap the SVG emblem in the hero for your logo.png
      ============================================================ -->
 
@@ -408,6 +409,36 @@ body.nav-open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-4
   color:var(--gold);
 }
 
+/* Completed roadmap phase */
+
+.phase.done{border-left-color:#4ade80}
+
+.phase.done h3{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.phase-status{
+  font-family:Inter,sans-serif;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  color:#4ade80;
+  background:rgba(74,222,128,.12);
+  border:1px solid rgba(74,222,128,.35);
+  padding:4px 10px;
+  border-radius:20px;
+}
+
+.phase.done li::before{
+  content:"✓";
+  color:#4ade80;
+  font-weight:700;
+}
+
 /* CTA */
 
 .cta{
@@ -556,6 +587,8 @@ footer{
   .section{padding:60px 6%}
 
   .cta{padding:80px 6%}
+
+  .soon-ribbon{font-size:11px;letter-spacing:2px;padding:8px 16px}
 }
 
 /* ---------- Reduced motion ---------- */
@@ -612,7 +645,8 @@ footer{
     <div class="buttons coming-soon">
       <a class="btn primary" href="#" aria-disabled="true" tabindex="-1">Buy on FOMO</a> <!-- TODO: live FOMO launch link -->
       <a class="btn secondary" href="#" aria-disabled="true" tabindex="-1">Buy on Pump.fun</a> <!-- TODO: Pump.fun coin link -->
-      <span class="soon-ribbon">Coming Soon</span>
+      <a class="btn secondary" href="https://www.letsbonk.fun/" target="_blank" rel="noopener" aria-disabled="true" tabindex="-1">Buy on BONK.fun</a> <!-- TODO: swap for your BONK.fun coin link at launch -->
+      <span class="soon-ribbon">Launching August 2026</span>
     </div>
 
   </div>
@@ -704,8 +738,8 @@ footer{
 
   <div class="timeline">
 
-    <div class="phase reveal">
-      <h3>Phase 1</h3>
+    <div class="phase done reveal">
+      <h3>Phase 1 <span class="phase-status">Complete</span></h3>
       <ul>
         <li>Launch</li>
         <li>Website</li>
@@ -756,7 +790,8 @@ footer{
   <div class="buttons reveal coming-soon">
     <a class="btn primary" href="#" aria-disabled="true" tabindex="-1">Launch on FOMO</a> <!-- TODO: live FOMO launch link -->
     <a class="btn secondary" href="#" aria-disabled="true" tabindex="-1">Buy on Pump.fun</a> <!-- TODO: Pump.fun coin link -->
-    <span class="soon-ribbon">Coming Soon</span>
+    <a class="btn secondary" href="https://www.letsbonk.fun/" target="_blank" rel="noopener" aria-disabled="true" tabindex="-1">Buy on BONK.fun</a> <!-- TODO: swap for your BONK.fun coin link at launch -->
+    <span class="soon-ribbon">Launching August 2026</span>
   </div>
 
 </section>
@@ -774,12 +809,12 @@ footer{
 
     <div class="card reveal">
       <h3>Is there a presale?</h3>
-      <p>No. Fair launch planned through a public launch platform.</p>
+      <p>No. A fair launch is planned for August 2026 through public launch platforms.</p>
     </div>
 
     <div class="card reveal">
       <h3>Where can I trade?</h3>
-      <p>After launch, trading will depend on the platform used and any subsequent listings.</p>
+      <p>At launch, QuestiQ will be available through FOMO, Pump.fun, and BONK.fun, with any additional listings to follow.</p>
     </div>
 
   </div>
