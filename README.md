@@ -34,7 +34,9 @@ Search `index.html` for **TODO** — every placeholder is tagged:
 
 | File | Purpose |
 |---|---|
-| `index.html` | The entire site — markup, styles, and scripts in one file |
+| `index.html` | The main site — markup, styles, and scripts in one file |
+| `knowledge-hub.html` | Knowledge Hub page (beta) — categories, learning paths, live search |
+| `sitemap.xml` | Sitemap listing both pages for search engines |
 | `og-image.png` | 1200×630 social share preview image (placeholder) |
 | `robots.txt` | Allows search engines to index the site |
 | `.nojekyll` | Tells GitHub Pages to skip Jekyll processing |

@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# After launch, optionally add:
-# Sitemap: https://getquestiq.com/sitemap.xml
+Sitemap: https://getquestiq.com/sitemap.xml
